@@ -59,7 +59,5 @@ app.use('/campgrounds/:id/comments', commentsRouter);
 app.use(indexRouter);
 
 // SERV LISTEN
-app.listen(3000, function(){
-	console.log('The YelpCamp sever is live');
-});
+app.listen(process.env.PORT, process.env.IP);
 
