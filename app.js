@@ -18,7 +18,8 @@ const campgroundRouter = require('./routes/campground'),
 	  indexRouter = require('./routes/index');
 
 // Connect with DB 
-mongoose.connect('mongodb+srv://ricferreira:14083741Aa@cluster0-jdcoz.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true,});
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true,});
+
 // Body-Parser - extract the entire body portion of an incoming request stream and exposes it on req.body
 app.use(bodyParser.urlencoded({extended: true}));
 // Static style sheet (main CSS)
@@ -60,4 +61,8 @@ app.use(indexRouter);
 
 // SERV LISTEN
 app.listen(process.env.PORT, process.env.IP);
+
+// app.listen(3000, function(){
+// 	console.log('The YelpCamp sever is live');
+// });
 
