@@ -18,7 +18,7 @@ const campgroundRouter = require('./routes/campground'),
 	  indexRouter = require('./routes/index');
 
 // Connect with DB 
-mongoose.connect('mongodb+srv://ricferreira:password14083741Aa!?!@yelpcamp-xebkk.mongodb.net/test?retryWrites=true&w=majority', { 
+mongoose.connect('mongodb+srv://ricferreira:14083741Aa!?!@yelpcamp-xebkk.mongodb.net/test?retryWrites=true&w=majority', { 
 	useNewUrlParser: true,
 	useCreateIndex: true
 });
