@@ -1,24 +1,27 @@
-var express        = require('express'),
-	app            = express(),
-	request        = require('request'),
-	passport       = require('passport'),
-	LocalStrategy  = require('passport-local'),
-	bodyParser     = require('body-parser'),
-	methodOverride = require('method-override'),
-	mongoose       = require('mongoose'),
-	flash          = require('connect-flash'),
-	Campground     = require('./models/campground'),
-	Comment        = require('./models/comment'),
-	User           = require('./models/user'),
-	seedDB         = require('./seeds');
+const express        = require('express'),
+	  app            = express(),
+	  request        = require('request'),
+	  passport       = require('passport'),
+	  LocalStrategy  = require('passport-local'),
+	  bodyParser     = require('body-parser'),
+	  methodOverride = require('method-override'),
+	  mongoose       = require('mongoose'),
+	  flash          = require('connect-flash'),
+	  Campground     = require('./models/campground'),
+	  Comment        = require('./models/comment'),
+	  User           = require('./models/user'),
+	  seedDB         = require('./seeds');
 
 //requiring routes
-var campgroundRouter = require('./routes/campground'),
-	commentsRouter = require('./routes/comments'),
-	indexRouter = require('./routes/index');
+const campgroundRouter = require('./routes/campground'),
+	  commentsRouter = require('./routes/comments'),
+	  indexRouter = require('./routes/index');
 
 // Connect with DB 
-mongoose.connect('mongodb://localhost/yelp_camp', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://ricferreira:password14083741Aa!?!@yelpcamp-xebkk.mongodb.net/test?retryWrites=true&w=majority', { 
+	useNewUrlParser: true,
+	useCreateIndex: true
+});
 // Body-Parser - extract the entire body portion of an incoming request stream and exposes it on req.body
 app.use(bodyParser.urlencoded({extended: true}));
 // Static style sheet (main CSS)
