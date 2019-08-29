@@ -18,10 +18,7 @@ const campgroundRouter = require('./routes/campground'),
 	  indexRouter = require('./routes/index');
 
 // Connect with DB 
-mongoose.connect('mongodb+srv://ricferreira:14083741Aa!?!@yelpcamp-xebkk.mongodb.net/test?retryWrites=true&w=majority', { 
-	useNewUrlParser: true,
-	useCreateIndex: true
-});
+mongoose.connect('mongodb+srv://ricferreira:14083741Aa@cluster0-jdcoz.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true,});
 // Body-Parser - extract the entire body portion of an incoming request stream and exposes it on req.body
 app.use(bodyParser.urlencoded({extended: true}));
 // Static style sheet (main CSS)
