@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<h1>
+	Signup
+</h1>
+
+<form action='/register' method='POST'>
+	<input type='text' name='username' placeholder='Username'>
+	<input type='password' name='password' placeholder='Password'>
+	<button>
+		Sign Up
+	</button>
+</form>
+
+<div>
+	<p>
+		Do you have an account already?<a href='/login'>Sign in</a>
+	</p>
+</div>
+
+<% include partials/footer %>
